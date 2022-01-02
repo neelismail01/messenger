@@ -197,6 +197,7 @@ extension ChatViewController: UIImagePickerControllerDelegate, UINavigationContr
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
         guard let messageId = createMessageId(),
               let conversationId = conversationID,
               let name = self.title,

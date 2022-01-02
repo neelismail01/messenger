@@ -180,12 +180,12 @@ extension ConversationsViewController: UITableViewDelegate, UITableViewDataSourc
                                                  for: indexPath) as! ConversationTableViewCell
         cell.configure(with: model)
         return cell
-    } 
+    }
     
-    func tableView(_ tableView: UITableView,  tRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         let model = conversations[indexPath.row]
-        openConversation(model )
+        openConversation(model)
     }
     
     func openConversation(_ model: Conversation) {
@@ -196,7 +196,7 @@ extension ConversationsViewController: UITableViewDelegate, UITableViewDataSourc
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+        return 80
     }
     
     func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
